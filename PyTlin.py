@@ -3,7 +3,7 @@ class k:
 		self.end = x
 
 	def __repr__(self):
-		return '%s' % self.end
+		return self.end.__repr__()
 
 	def __matmul__(self, f):
 		return self.end if (f == 'end' or f ==  0) else self.__class__(f(self.end))
